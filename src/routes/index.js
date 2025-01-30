@@ -4,7 +4,7 @@ const router = express.Router();
 
 /**
  * @swagger
- * /example:
+ * /api/example:
  *   get:
  *     summary: Rota para teste inicial
  *     description: Endpoint que retorna uma mensagem simples.

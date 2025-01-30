@@ -9,7 +9,7 @@ const options = {
       version: "1.0.0",
       description: "Documentação da API com Swagger",
     },
-    servers: [{ url: "http://localhost:8800" }],
+    servers: [{ url: "http://localhost:3000" }],
   },
   apis: ["src/routes/*.js"],
 };
