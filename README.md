@@ -7,6 +7,8 @@
 - morgan: Middleware para logar requisições no console.
 - cors: Permitir requisições de diferentes origens.
 - swagger: Cria automaticamente a documentação das rotas
+- helmet: Configuração de cabeçalhos de segurança
+- rateLimit: Limita solicitações repetidas para APIs públicas e/ou endpoints - mitiga ataques de força bruta
 
 ### Exemplo de documentação de rota com o Swagger
 Você deve construir um comentário estruturado que descreve uma rota.<br>
@@ -37,4 +39,19 @@ que seja exibido na página da documentação da API:
  *                     example: "Uma mensagem qualquer"
  */
 
+```
+
+### Exemplo de uso do express-rate-limit
+```js
+// Configuração de Rate Limiting (para evitar excesso de requisições)
+const apiLimiter = rateLimit({
+    windowMs: 60 * 1000, // 1 minuto
+    max: 100, // Limite de 100 requisições por IP por janela de tempo
+    message: {
+        status: 429, // Código HTTP para "Too Many Requests"
+        message: "Você excedeu o limite de requisições permitido. Por favor, tente novamente mais tarde."
+    },
+    standardHeaders: true, // Retorna informações sobre limite no cabeçalho
+    legacyHeaders: false, // Remove cabeçalhos obsoletos
+});
 ```

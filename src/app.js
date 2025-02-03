@@ -3,8 +3,13 @@ import morgan from "morgan";
 import cors from "cors";
 import routes from "./routes/index.js";
 import { swaggerDocs } from "../swagger.js";
+import helmet from "helmet";
 
 const app = express();
+
+// configuração padrão do helmut para cabeçalhos de segurança
+// documentação:  https://helmetjs.github.io/ 
+app.use(helmet());
 
 // Middlewares
 app.use(express.json());
