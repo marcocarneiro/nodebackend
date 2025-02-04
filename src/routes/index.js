@@ -1,4 +1,5 @@
 import express from "express";
+import { authenticateToken } from "../middleware/authMiddleware.js";
 
 const router = express.Router();
 
@@ -27,7 +28,7 @@ const router = express.Router();
  */
 
 // Exemplo de rota
-router.get("/example", (req, res) => {
+router.get("/example", authenticateToken, (req, res) => {
   res.json({ message: "Rota de exemplo funcionando!" });
 });
 
