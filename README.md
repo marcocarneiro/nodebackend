@@ -10,6 +10,14 @@
 - helmet: Configuração de cabeçalhos de segurança
 - rateLimit: Limita solicitações repetidas para APIs públicas e/ou endpoints - mitiga ataques de força bruta
 - passport, passport-google-oauth20, e jsonwebtoken:  Autenticação e geração de tokens.
+- supabase: Banco de dados e storage de imagens
+
+### Exemplo de arquivo .env com as variáveis de ambiente necessárias
+```js
+PORT=3000
+SUPABASE_URL=https://suaurl.supabase.co
+SUPABASE_KEY=suachavesupabase
+```
 
 ### OAuth 2.0 no Google Cloud Console
 Acesse o console do Google para configurar no seu projeto, as variáveis de ambiente GOOGLE_CLIENT_ID e GOOGLE_CLIENT_SECRET
