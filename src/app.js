@@ -4,12 +4,19 @@ import cors from "cors";
 import routes from "./routes/index.js";
 import authRoutes from "./routes/auth.js";
 import { swaggerDocs } from "../swagger.js";
+<<<<<<< HEAD
 import helmet from "helmet";
 import passport from "passport";
 
 const app = express();
 
 app.use(helmet());
+=======
+
+const app = express();
+
+// Middlewares
+>>>>>>> parent of a7e5735 (Implementação do Helmet (segurança) e express-limit-rate (configura prevenção de ataque de força bruta))
 app.use(express.json());
 app.use(morgan("dev"));
 app.use(cors());
