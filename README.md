@@ -7,7 +7,6 @@
 - morgan: Middleware para logar requisições no console.
 - cors: Permitir requisições de diferentes origens.
 - swagger: Cria automaticamente a documentação das rotas
-<<<<<<< HEAD
 - helmet: Configuração de cabeçalhos de segurança
 - rateLimit: Limita solicitações repetidas para APIs públicas e/ou endpoints - mitiga ataques de força bruta
 - passport, passport-google-oauth20, e jsonwebtoken:  Autenticação e geração de tokens.
@@ -22,8 +21,6 @@ SUPABASE_KEY=suachavesupabase
 
 ### OAuth 2.0 no Google Cloud Console
 Acesse o console do Google para configurar no seu projeto, as variáveis de ambiente GOOGLE_CLIENT_ID e GOOGLE_CLIENT_SECRET
-=======
->>>>>>> parent of a7e5735 (Implementação do Helmet (segurança) e express-limit-rate (configura prevenção de ataque de força bruta))
 
 ### Exemplo de documentação de rota com o Swagger
 Você deve construir um comentário estruturado que descreve uma rota.<br>
